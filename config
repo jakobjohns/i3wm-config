@@ -182,16 +182,19 @@ bar {
 
 #i3 gaps enabled settings
 hide_edge_borders on
-gaps inner 10
-gaps outer 10
+gaps inner 2
+gaps outer 2
 smart_borders on
 smart_gaps on
+default_border none
 
 # Autolock settings
-bindsym $mod+Shift+l exec i3lock -t -i /home/jakobjohns/Pictures/Wallpapers/solarized-wallpaper-fedora.png
+bindsym $mod+ctrl+l exec i3lock -t -i /home/jakobjohns/Pictures/Wallpapers/solarized-wallpaper-fedora.png
+bindsym $mod+ctrl+p exec --no-startup-id systemctl hybrid-sleep, mode "default"
 
 # This is auto-start apps
 exec nitrogen --restore
+exec xinput set-prop "SynPS/2 Synaptics TouchPad" 338 0.5
 exec /home/jakobjohns/.screenlayout/dualmonitor.sh
 
 
